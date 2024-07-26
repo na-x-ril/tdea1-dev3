@@ -23,7 +23,7 @@ const equalizer = {
 for (const frequency in equalizer) {
     const filterSettings = equalizer[frequency];
     biquadFilter.frequency.value = filterSettings.frequency;
-    biquadFilter.Q.value = 1.4;
+    biquadFilter.Q.value = 3.0;
     biquadFilter.gain.value = filterSettings.gain;
 }
 
