@@ -27,8 +27,8 @@ for (const frequency in equalizer) {
     biquadFilter.gain.value = filterSettings.gain;
 }
 
-inGain.gain.value = 0.6;
-outGain.gain.value = 3.0;
+inGain.gain.value = 0.2;
+outGain.gain.value = 2.7;
 
 audioStream.connect(inGain);
 inGain.connect(biquadFilter);
