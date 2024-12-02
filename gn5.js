@@ -1,6 +1,5 @@
-function createAudioNode(videoElement) {
-  const audioContext = new AudioContext();
-  const audioStream = audioContext.createMediaElementSource(videoElement);
+const audioContext = new AudioContext();
+  const audioStream = audioContext.createMediaElementSource(document.querySelector('video') || document.querySelector('audio'));
   const inGain = audioContext.createGain();
   const biquadFilter = audioContext.createBiquadFilter();
   const outGain = audioContext.createGain();
@@ -30,4 +29,3 @@ function createAudioNode(videoElement) {
   audioStream.connect(inGain).connect(biquadFilter).connect(outGain).connect(audioContext.destination);
   console.log('Bass Boosted!');
   return true;
-}
